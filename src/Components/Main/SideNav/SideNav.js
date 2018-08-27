@@ -22,12 +22,12 @@ class SideNav extends Component {
 
                 <div className="scroll flex-grow-1 mb-0">
                     <ul className="list-unstyled components">
-                        <li><a href="#">Все записи</a></li>
-                        <li><a href="#">Избранное</a></li>
+                        <li><a href="#"><Fa icon="dashboard"/> Все записи</a></li>
+                        <li><a href="#"><Fa icon="star"/> Избранное</a></li>
                         <br/>
                         <li>
                             <a href="#" data-toggle="collapse" aria-expanded="true"
-                               className="dropdown-toggle">Хранилище 1</a>
+                               className="dropdown-toggle"><Fa icon="archive"/> Хранилище 1</a>
                             <ul className="collapse list-unstyled show" id="homeSubmenu">
                                 <li>
                                     <a href="#" data-toggle="collapse" aria-expanded="true"
@@ -51,8 +51,8 @@ class SideNav extends Component {
                                 <li><a href="#">Папка 3</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Хранилище 2</a></li>
-                        <li><a href="#">Хранилище 3</a></li>
+                        <li><a href="#"><Fa icon="archive"/> Хранилище 2</a></li>
+                        <li><a href="#"><Fa icon="archive"/> Хранилище 3</a></li>
                     </ul>
                 </div>
             </nav>

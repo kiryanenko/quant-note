@@ -41,11 +41,11 @@ class NoteListBar extends Component {
                     <ListGroup>
                         <ListGroupItem active href="#">
                             <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">List group item heading</h5>
+                                <h5 class="mb-1"><Fa icon="sticky-note"/> List group item heading</h5>
                                 <small>3 days ago</small>
                             </div>
                             <p class="mb-0">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                            <small>/ Хранилеще 1 / Папка 1 </small>
+                            <small>/ Хранилеще 1 / Папка 1 / file.md</small>
                             <p class="mb-0">
                                 <Badge color="default">Метка 1 <Fa icon="close"/></Badge>&nbsp;
                                 <Badge color="primary">Метка 2 <Fa icon="close"/></Badge>&nbsp;
@@ -54,11 +54,29 @@ class NoteListBar extends Component {
                         </ListGroupItem>
                         <ListGroupItem hover href="#">
                             <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">List group item heading</h5>
+                                <h5 class="mb-1"><Fa icon="sticky-note"/> List group item heading</h5>
                                 <small>3 days ago</small>
                             </div>
                             <p class="mb-0">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                            <small>/ Хранилеще 1 / Папка 1 </small>
+                            <div className="d-flex align-items-end justify-content-between">
+                                <div>
+                                    <small>/ Хранилеще 1 / Папка 1 / file.md</small>
+                                    <p className="mb-0">
+                                        <Badge color="default">Метка 1 <Fa icon="close"/></Badge>&nbsp;
+                                        <Badge color="primary">Метка 2 <Fa icon="close"/></Badge>&nbsp;
+                                        <Badge color="success">Метка 3 <Fa icon="close"/></Badge>&nbsp;
+                                    </p>
+                                </div>
+                                <span className="amber-text"><Fa icon="star"/></span>
+                            </div>
+                        </ListGroupItem>
+                        <ListGroupItem hover href="#">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1"><Fa icon="file-pdf-o"/> List group item heading</h5>
+                                <small>3 days ago</small>
+                            </div>
+                            <p class="mb-0">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                            <small>/ Хранилеще 1 / Папка 1 / file.pdf</small>
                             <p class="mb-0">
                                 <Badge color="default">Метка 1 <Fa icon="close"/></Badge>&nbsp;
                                 <Badge color="primary">Метка 2 <Fa icon="close"/></Badge>&nbsp;
@@ -67,11 +85,50 @@ class NoteListBar extends Component {
                         </ListGroupItem>
                         <ListGroupItem hover href="#">
                             <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">List group item heading</h5>
+                                <h5 class="mb-1"><Fa icon="file-word-o"/> List group item heading</h5>
                                 <small>3 days ago</small>
                             </div>
                             <p class="mb-0">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                            <small>/ Хранилеще 1 / Папка 1 </small>
+                            <small>/ Хранилеще 1 / Папка 1 / file.docx</small>
+                            <p class="mb-0">
+                                <Badge color="default">Метка 1 <Fa icon="close"/></Badge>&nbsp;
+                                <Badge color="primary">Метка 2 <Fa icon="close"/></Badge>&nbsp;
+                                <Badge color="success">Метка 3 <Fa icon="close"/></Badge>&nbsp;
+                            </p>
+                        </ListGroupItem>
+                        <ListGroupItem hover href="#">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1"><Fa icon="file-powerpoint-o"/> List group item heading</h5>
+                                <small>3 days ago</small>
+                            </div>
+                            <p class="mb-0">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                            <small>/ Хранилеще 1 / Папка 1 / file.pptx</small>
+                            <p class="mb-0">
+                                <Badge color="default">Метка 1 <Fa icon="close"/></Badge>&nbsp;
+                                <Badge color="primary">Метка 2 <Fa icon="close"/></Badge>&nbsp;
+                                <Badge color="success">Метка 3 <Fa icon="close"/></Badge>&nbsp;
+                            </p>
+                        </ListGroupItem>
+                        <ListGroupItem hover href="#">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1"><Fa icon="file-text-o"/> List group item heading</h5>
+                                <small>3 days ago</small>
+                            </div>
+                            <p class="mb-0">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                            <small>/ Хранилеще 1 / Папка 1 / file.txt</small>
+                            <p class="mb-0">
+                                <Badge color="default">Метка 1 <Fa icon="close"/></Badge>&nbsp;
+                                <Badge color="primary">Метка 2 <Fa icon="close"/></Badge>&nbsp;
+                                <Badge color="success">Метка 3 <Fa icon="close"/></Badge>&nbsp;
+                            </p>
+                        </ListGroupItem>
+                        <ListGroupItem hover href="#">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1"><Fa icon="globe"/> List group item heading</h5>
+                                <small>3 days ago</small>
+                            </div>
+                            <p class="mb-0">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                            <small>/ Хранилеще 1 / Папка 1 / file.html</small>
                             <p class="mb-0">
                                 <Badge color="default">Метка 1 <Fa icon="close"/></Badge>&nbsp;
                                 <Badge color="primary">Метка 2 <Fa icon="close"/></Badge>&nbsp;
