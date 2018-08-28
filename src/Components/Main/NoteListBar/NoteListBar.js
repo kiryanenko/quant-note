@@ -16,7 +16,7 @@ class NoteListBar extends Component {
                     </div>
                     <div>
                         <small className="text-muted">
-                            <a href="#">/</a> <a href="#">Хранилище 1</a> / <a href="#">Папка 1</a>
+                            <a href="#"><Fa icon="folder"/> /</a> <a href="#">Хранилище 1 /</a> <a href="#">Папка 1</a>
                         </small>
                     </div>
                     <div>
