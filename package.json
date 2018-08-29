@@ -5,6 +5,7 @@
   "main": "main.js",
   "dependencies": {
     "mdbreact": "^4.7.0",
+    "rc-switch": "^1.7.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-scripts": "1.1.5"
