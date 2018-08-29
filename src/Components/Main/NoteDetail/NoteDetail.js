@@ -11,9 +11,9 @@ class NoteDetail extends Component {
                     <div className="d-flex justify-content-between align-items-center">
                         <h2><Fa icon="sticky-note"/> Название заметки</h2>
                         <div className="d-flex">
-                            <Switch checkedChildren={(<Fa icon="window-maximize"/>)}
-                                    unCheckedChildren={(<Fa icon="columns"/>)}
-                                    className="mr-3"/>
+                            <Switch unCheckedChildren={(<Fa icon="window-maximize"/>)}
+                                    checkedChildren={(<Fa icon="columns"/>)}
+                                    className="mr-3" checked/>
                             <Tooltip placement="bottom" component="a" tooltipContent="Удалить"
                                      componentClass="mr-5">
                                 <Fa icon="arrows-alt" size="lg"/>
@@ -31,11 +31,14 @@ class NoteDetail extends Component {
                             <Popover component="a" placement="bottom"
                                      popoverBody={(<Fa icon="info-circle" size="lg"/>)}>
                                 <PopoverBody>
-                                    <span>Aug 26, 2018 20:30</span><br/>
-                                    <small className="text-muted">Дата изменения</small><br/>
+                                    <div className="px-4">
+                                        <span>Aug 26, 2018 20:30</span><br/>
+                                        <small className="text-muted">Дата изменения</small><br/>
 
-                                    <span>Aug 26, 2018 20:30</span><br/>
-                                    <small className="text-muted">Дата создания</small>
+
+                                        <span>Aug 26, 2018 20:30</span><br/>
+                                        <small className="text-muted">Дата создания</small>
+                                    </div>
                                     <div className="dropdown-divider"/>
 
                                     <div className="row text-center">
@@ -48,6 +51,30 @@ class NoteDetail extends Component {
                                             <small>Букв</small>
                                         </div>
                                     </div>
+                                    <div className="dropdown-divider"/>
+
+                                    <a className="dropdown-item" href="#">Открыть в другом приложениии</a>
+                                    <a className="dropdown-item" href="#">Показать в папке</a>
+                                    <div className="dropdown-divider"/>
+
+                                    <div className="d-flex justify-content-around text-center">
+                                        <div className="m-2">
+                                            <Fa icon="file-pdf-o" size="4x"/><br/>
+                                            <small>.pdf</small>
+                                        </div>
+                                        <div className="m-2">
+                                            <Fa icon="html5" size="4x"/><br/>
+                                            <small>.html</small>
+                                        </div>
+                                        <div className="m-2">
+                                            <Fa icon="print" size="4x"/><br/>
+                                            <small>Print</small>
+                                        </div>
+                                        <div className="m-2">
+                                            <Fa icon="share-alt" size="4x"/><br/>
+                                            <small>Share</small>
+                                        </div>
+                                    </div>
                                 </PopoverBody>
                             </Popover>
                         </div>
@@ -57,7 +84,7 @@ class NoteDetail extends Component {
                             <a href="#"><Fa icon="folder"/> / Хранилище 1 / Папка 1</a>
                         </small>
                         <small>
-                            <span className="text-muted"><Fa icon="link"/> Источник:</span> <a href="#">http://source.com/source</a>
+                            <span className="text-muted"><Fa icon="external-link"/> Источник:</span> <a href="#">http://source.com/source</a>
                         </small>
                     </div>
                     <div className="d-flex align-items-center">
