@@ -6,7 +6,7 @@ import Switch from 'rc-switch';
 class NoteDetail extends Component {
     render() {
         return (
-            <div id="NoteDetail" className="d-flex flex-column col-7 h-100 p-0">
+            <div id="NoteDetail" className="container-fluid d-flex flex-column col-7 h-100">
                 <div id="NoteDetailHeader" className="p-2">
                     <div className="d-flex justify-content-between align-items-center">
                         <h2><Fa icon="sticky-note"/> Название заметки</h2>
@@ -95,9 +95,19 @@ class NoteDetail extends Component {
                     </div>
                 </div>
 
-                <div className="NoteList scroll flex-grow-1">
 
-                </div>
+                    <div className="row flex-grow-1 h-100">
+                        <div className="col h-100">
+                        <textarea className="form-control h-100">
+
+                        </textarea>
+                        </div>
+
+                        <div className="col scroll">
+                            <h1>Превью заметки</h1>
+                            <p>Содержимое заметки</p>
+                        </div>
+                    </div>
             </div>
         );
     }
