@@ -8,7 +8,7 @@ class NoteDetail extends Component {
         return (
             <div id="NoteDetail" className="container-fluid d-flex flex-column col-7 h-100">
                 <div id="NoteDetailHeader" className="p-2">
-                    <div className="d-flex justify-content-between align-items-center">
+                    <div className="d-flex justify-content-between align-items-top">
                         <h2><Fa icon="sticky-note"/> Название заметки</h2>
                         <div className="d-flex">
                             <Switch unCheckedChildren={(<Fa icon="window-maximize"/>)}
