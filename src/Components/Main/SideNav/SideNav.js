@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Fa, Badge, Tooltip} from 'mdbreact'
 import NavItem from './NavItem/NavItem'
+import Settings from '../../Settings/Settings'
 import './SideNav.css';
 
 class SideNav extends Component {
@@ -17,7 +18,7 @@ class SideNav extends Component {
                         </Tooltip>
                     </div>
                     <Tooltip placement="bottom" component="a" tooltipContent="Настройки">
-                        <a href="#"><Fa icon="sliders" size="2x"/></a>
+                        <a onClick={Settings.open}><Fa icon="sliders" size="2x"/></a>
                     </Tooltip>
                 </div>
 
