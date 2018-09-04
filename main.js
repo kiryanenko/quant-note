@@ -1,6 +1,7 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow} = require('electron');
 const settings = require('electron-settings');
+const i18n = require('./src/libs/i18n');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -54,9 +55,9 @@ app.on('activate', function () {
 // code. You can also put them in separate files and require them here.
 
 function setDefaultSettings() {
-    // TODO
-    settings.set('name', {
-        first: 'Cosmo',
-        last: 'Kramer'
-    }, {prettify: true});
+    if (!settings.has('locale')) {
+        i18n.setLocaleFromEnvironmentVariable();
+    } else {
+        i18n.setLocale(settings.get('locale'));
+    }
 }

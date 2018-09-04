@@ -3,6 +3,8 @@ import NavLink from './NavLink/NavLink'
 import NavTab from './NavTab/NavTab'
 
 const { remote } = window.require('electron');
+const i18n = remote.require('./src/libs/i18n');
+const settings = remote.require('electron-settings');
 
 
 class Settings extends Component {
@@ -11,7 +13,10 @@ class Settings extends Component {
 
         this.state = {
             tab: 'basic',
+            language: i18n.getLocale()
         };
+
+        this.onLanguageChange = this.onLanguageChange.bind(this);
     }
 
     static open() {
@@ -25,6 +30,13 @@ class Settings extends Component {
 
     setTab(tab) {
         this.state.tab = tab;
+    }
+
+    onLanguageChange(event) {
+        let locale = event.target.value;
+        this.setState({language: locale});
+        i18n.setLocale(locale);
+        settings.set('locale', locale, {prettify: true})
     }
 
     render() {
@@ -42,9 +54,16 @@ class Settings extends Component {
                     <div className="col-9">
                         <div className="tab-content" id="v-pills-tabContent">
                             <NavTab active={this.state.tab === 'basic'}>
-                                {/* TODO */}
-                                <h1>Basic</h1>
-                                Cillum ad ut irure tempor velit nostrud occaecat ullamco aliqua anim Lorem sint. Veniam sint duis incididunt do esse magna mollit excepteur laborum qui. Id id reprehenderit sit est eu aliqua occaecat quis et velit excepteur laborum mollit dolore eiusmod. Ipsum dolor in occaecat commodo et voluptate minim reprehenderit mollit pariatur. Deserunt non laborum enim et cillum eu deserunt excepteur ea incididunt minim occaecat.
+                                <div className="form-group row">
+                                    <label className="col-3 col-form-label">Language</label>
+                                    <div className="col-9">
+                                        <select className="form-control" value={this.state.language}
+                                                onChange={this.onLanguageChange}>
+                                            <option value="en">English</option>
+                                            <option value="ru">Русский</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </NavTab>
                             <NavTab active={this.state.tab === 'about'}>
                                 <h1>Quant Note</h1>

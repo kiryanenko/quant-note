@@ -4,6 +4,8 @@ import NavItem from './NavItem/NavItem'
 import Settings from '../../Settings/Settings'
 import './SideNav.css';
 
+const i18n = window.require('electron').remote.require('./src/libs/i18n');
+
 class SideNav extends Component {
     render() {
         return (
@@ -17,7 +19,7 @@ class SideNav extends Component {
                             <a href="#"><Fa icon="tags" size="2x"/></a>
                         </Tooltip>
                     </div>
-                    <Tooltip placement="bottom" component="a" tooltipContent="Настройки">
+                    <Tooltip placement="bottom" component="a" tooltipContent={i18n.__('Settings')}>
                         <a onClick={Settings.open}><Fa icon="sliders" size="2x"/></a>
                     </Tooltip>
                 </div>
