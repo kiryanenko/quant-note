@@ -4,9 +4,30 @@ import NavItem from './NavItem/NavItem'
 import Settings from '../../Settings/Settings'
 import './SideNav.css';
 
-const i18n = window.require('electron').remote.require('./src/libs/i18n');
+// const i18n = window.require('electron').remote.require('./src/libs/i18n');
+const { remote } = window.require('electron');
+const settings = remote.require('electron-settings');
+
 
 class SideNav extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+          i18n: remote.require('./src/libs/i18n')
+        };
+
+        this.onChangeLocale = this.onChangeLocale.bind(this);
+    }
+
+    componentDidMount() {
+        settings.watch('locale', this.onChangeLocale);
+    }
+
+    onChangeLocale() {
+        this.setState({i18n: remote.require('./src/libs/i18n')});
+    }
+
     render() {
         return (
             <nav id="SideNav" className="d-flex flex-column col-2 p-0">
@@ -19,7 +40,7 @@ class SideNav extends Component {
                             <a href="#"><Fa icon="tags" size="2x"/></a>
                         </Tooltip>
                     </div>
-                    <Tooltip placement="bottom" component="a" tooltipContent={i18n.__('Settings')}>
+                    <Tooltip placement="bottom" component="a" tooltipContent={this.state.i18n.__('Settings')}>
                         <a onClick={Settings.open}><Fa icon="sliders" size="2x"/></a>
                     </Tooltip>
                 </div>
