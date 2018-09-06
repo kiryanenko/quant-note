@@ -14,16 +14,16 @@ class NoteDetail extends Component {
                             <Switch unCheckedChildren={(<Fa icon="window-maximize"/>)}
                                     checkedChildren={(<Fa icon="columns"/>)}
                                     className="mr-3" checked/>
-                            <Tooltip placement="bottom" component="a" tooltipContent="Удалить"
+                            <Tooltip placement="bottom" component="a" tooltipContent={this.state.i18n.__('Fullscreen')}
                                      componentClass="mr-5">
                                 <Fa icon="arrows-alt" size="lg"/>
                             </Tooltip>
 
-                            <Tooltip placement="bottom" component="a" tooltipContent="Добавить в избранное"
-                                     componentClass="mr-3">
+                            <Tooltip placement="bottom" component="a"
+                                     tooltipContent={this.state.i18n.__('Add to favorites')} componentClass="mr-3">
                                 <Fa icon="star-o" size="lg"/>
                             </Tooltip>
-                            <Tooltip placement="bottom" component="a" tooltipContent="Удалить"
+                            <Tooltip placement="bottom" component="a" tooltipContent={this.state.i18n.__('Remove')}
                                      componentClass="mr-3">
                                 <Fa icon="trash" size="lg"/>
                             </Tooltip>

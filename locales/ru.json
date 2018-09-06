@@ -1,3 +1,8 @@
 {
-  "Settings": "Настройки"
+	"Settings": "Настройки",
+	"Notepads": "Блокноты",
+	"Label": "Метка",
+	"Labels": "Метки",
+	"All notes": "Все заметки",
+	"Favorites": "Избранное"
 }

@@ -4,7 +4,7 @@ import NavItem from './NavItem/NavItem'
 import Settings from '../../Settings/Settings'
 import './SideNav.css';
 
-// const i18n = window.require('electron').remote.require('./src/libs/i18n');
+
 const { remote } = window.require('electron');
 const settings = remote.require('electron-settings');
 
@@ -33,10 +33,11 @@ class SideNav extends Component {
             <nav id="SideNav" className="d-flex flex-column col-2 p-0">
                 <div className="d-flex justify-content-between p-2">
                     <div className="d-flex ml-2">
-                        <Tooltip placement="bottom" component="a" tooltipContent="Блокноты">
+                        <Tooltip placement="bottom" component="a" tooltipContent={this.state.i18n.__('Notepads')}>
                             <a href="#"><Fa icon="book" size="2x"/></a>
                         </Tooltip>
-                        <Tooltip placement="bottom" component="a" tooltipContent="Метки" componentClass="mx-3">
+                        <Tooltip placement="bottom" component="a" tooltipContent={this.state.i18n.__('Labels')}
+                                 componentClass="mx-3">
                             <a href="#"><Fa icon="tags" size="2x"/></a>
                         </Tooltip>
                     </div>
@@ -47,8 +48,8 @@ class SideNav extends Component {
 
                 <div className="scroll flex-grow-1 mb-0">
                     <ul className="list-unstyled components">
-                        <NavItem text="Все записи" icon="dashboard" href="#" count={321}/>
-                        <NavItem text="Избранное" icon="star" href="#" count={12}/>
+                        <NavItem text={this.state.i18n.__('All notes')} icon="dashboard" href="#" count={321}/>
+                        <NavItem text={this.state.i18n.__('Favorites')} icon="star" href="#" count={12}/>
                         <br/>
 
                         <NavItem text="Хранилище 1" icon="archive" href="#" count={123}>
