@@ -2,30 +2,15 @@ import React, { Component } from 'react';
 import {Fa, Badge, Tooltip} from 'mdbreact'
 import NavItem from './NavItem/NavItem'
 import Settings from '../../Settings/Settings'
+import {initI18n} from '../../Utils/locale'
 import './SideNav.css';
-
-
-const { remote } = window.require('electron');
-const settings = remote.require('electron-settings');
 
 
 class SideNav extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-          i18n: remote.require('./src/libs/i18n')
-        };
-
-        this.onChangeLocale = this.onChangeLocale.bind(this);
-    }
-
-    componentDidMount() {
-        settings.watch('locale', this.onChangeLocale);
-    }
-
-    onChangeLocale() {
-        this.setState({i18n: remote.require('./src/libs/i18n')});
+        initI18n(this);
     }
 
     render() {

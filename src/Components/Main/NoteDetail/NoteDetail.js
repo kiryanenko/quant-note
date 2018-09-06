@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
-import './NoteDetail.css';
 import {Badge, Fa, Input, ListGroup, ListGroupItem, Tooltip, Popover, PopoverBody} from "mdbreact";
 import Switch from 'rc-switch';
+import {initI18n} from '../../Utils/locale'
+import './NoteDetail.css';
 
 class NoteDetail extends Component {
+    constructor(props) {
+        super(props);
+
+        initI18n(this);
+    }
+
     render() {
         return (
             <div id="NoteDetail" className="container-fluid d-flex flex-column col-7 h-100">
@@ -33,28 +40,28 @@ class NoteDetail extends Component {
                                 <PopoverBody>
                                     <div className="px-4">
                                         <span>Aug 26, 2018 20:30</span><br/>
-                                        <small className="text-muted">Дата изменения</small><br/>
+                                        <small className="text-muted">{this.state.i18n.__('MODIFICATION DATE')}</small><br/>
 
 
                                         <span>Aug 26, 2018 20:30</span><br/>
-                                        <small className="text-muted">Дата создания</small>
+                                        <small className="text-muted">{this.state.i18n.__('CREATION DATE')}</small>
                                     </div>
                                     <div className="dropdown-divider"/>
 
                                     <div className="row text-center">
                                         <div className="col">
                                             <span>1234</span><br/>
-                                            <small>Слов</small>
+                                            <small>{this.state.i18n.__('WORDS')}</small>
                                         </div>
                                         <div className="col">
                                             <span>12345</span><br/>
-                                            <small>Букв</small>
+                                            <small>{this.state.i18n.__('LETTERS')}</small>
                                         </div>
                                     </div>
                                     <div className="dropdown-divider"/>
 
-                                    <a className="dropdown-item" href="#">Открыть в другом приложениии</a>
-                                    <a className="dropdown-item" href="#">Показать в папке</a>
+                                    <a className="dropdown-item" href="#">{this.state.i18n.__('Open in another app')}</a>
+                                    <a className="dropdown-item" href="#">{this.state.i18n.__('Show in folder')}</a>
                                     <div className="dropdown-divider"/>
 
                                     <div className="d-flex justify-content-around text-center">
@@ -68,11 +75,11 @@ class NoteDetail extends Component {
                                         </div>
                                         <div className="m-2">
                                             <Fa icon="print" size="4x"/><br/>
-                                            <small>Print</small>
+                                            <small>{this.state.i18n.__('Print')}</small>
                                         </div>
                                         <div className="m-2">
                                             <Fa icon="share-alt" size="4x"/><br/>
-                                            <small>Share</small>
+                                            <small>{this.state.i18n.__('Share')}</small>
                                         </div>
                                     </div>
                                 </PopoverBody>
@@ -84,7 +91,8 @@ class NoteDetail extends Component {
                             <a href="#"><Fa icon="folder"/> / Хранилище 1 / Папка 1</a>
                         </small>
                         <small>
-                            <span className="text-muted"><Fa icon="external-link"/> Источник:</span> <a href="#">http://source.com/source</a>
+                            <span className="text-muted"><Fa icon="external-link"/> {this.state.i18n.__('Source')}: </span>
+                            <a href="#">http://source.com/source</a>
                         </small>
                     </div>
                     <div className="d-flex align-items-center">

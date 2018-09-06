@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import './NoteListBar.css';
 import {Fa, Tooltip, Input, ListGroup, ListGroupItem, Badge} from 'mdbreact'
+import {initI18n} from '../../Utils/locale'
 
 
 class NoteListBar extends Component {
+    constructor(props) {
+        super(props);
+
+        initI18n(this);
+    }
+
     render() {
         return (
             <div id="NoteListBar" className="d-flex flex-column col-3 h-100 p-0">
@@ -26,8 +33,8 @@ class NoteListBar extends Component {
                     </div>
                     <div className="d-flex justify-content-between align-items-center mt-2">
                         <select className="form-control form-control-sm">
-                            <option>По дате изменения</option>
-                            <option>По названию</option>
+                            <option>{this.state.i18n.__('By modification date')}</option>
+                            <option>{this.state.i18n.__('By title')}</option>
                         </select>
                         <div className="d-flex ml-3">
                             <a href="#"><Fa icon="th-list" size="lg"/></a>

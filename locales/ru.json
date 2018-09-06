@@ -4,5 +4,20 @@
 	"Label": "Метка",
 	"Labels": "Метки",
 	"All notes": "Все заметки",
-	"Favorites": "Избранное"
+	"Favorites": "Избранное",
+	"Fullscreen": "Fullscreen",
+	"Add to favorites": "Add to favorites",
+	"Remove": "Remove",
+	"MODIFICATION DATE": "MODIFICATION DATE",
+	"": "",
+	"CREATION DATE": "CREATION DATE",
+	"WORDS": "WORDS",
+	"LETTERS": "LETTERS",
+	"Open in another app": "Open in another app",
+	"Show in folder": "Show in folder",
+	"Print": "Print",
+	"Share": "Share",
+	"Source": "Source",
+	"By modification date": "По дате изменения",
+	"By title": "По названию"
 }

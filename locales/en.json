@@ -3,5 +3,19 @@
 	"Notepads": "Notepads",
 	"Labels": "Labels",
 	"All notes": "All notes",
-	"Favorites": "Favorites"
+	"Favorites": "Favorites",
+	"Fullscreen": "Fullscreen",
+	"Add to favorites": "Add to favorites",
+	"Remove": "Remove",
+	"MODIFICATION DATE": "MODIFICATION DATE",
+	"CREATION DATE": "CREATION DATE",
+	"WORDS": "WORDS",
+	"LETTERS": "LETTERS",
+	"Open in another app": "Open in another app",
+	"Show in folder": "Show in folder",
+	"Print": "Print",
+	"Share": "Share",
+	"Source": "Source",
+	"By modification date": "By modification date",
+	"By title": "By title"
 }
