@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import {Badge, Fa, Input, ListGroup, ListGroupItem, Tooltip, Popover, PopoverBody} from "mdbreact";
 import Switch from 'rc-switch';
 import {initI18n} from '../../Utils/locale'
+import CodeEditor from './CodeEditor/CodeEditor'
 import './NoteDetail.css';
+
 
 class NoteDetail extends Component {
     constructor(props) {
@@ -104,18 +106,16 @@ class NoteDetail extends Component {
                 </div>
 
 
-                    <div className="row flex-grow-1 h-100">
-                        <div className="col h-100">
-                        <textarea className="form-control h-100">
-
-                        </textarea>
-                        </div>
-
-                        <div className="col scroll">
-                            <h1>Превью заметки</h1>
-                            <p>Содержимое заметки</p>
-                        </div>
+                <div className="row flex-grow-1 h-100">
+                    <div className="col h-100">
+                        <CodeEditor/>
                     </div>
+
+                    <div className="col scroll">
+                        <h1>Превью заметки</h1>
+                        <p>Содержимое заметки</p>
+                    </div>
+                </div>
             </div>
         );
     }

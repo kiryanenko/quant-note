@@ -60,4 +60,6 @@ function setDefaultSettings() {
     } else {
         i18n.setLocale(settings.get('locale'));
     }
+
+    if (!settings.has('editorTheme')) settings.set('editorTheme', 'base16-light', {prettify: true});
 }
