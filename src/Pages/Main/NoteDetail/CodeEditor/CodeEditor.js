@@ -58,6 +58,7 @@ import 'codemirror/theme/xq-dark.css';
 import 'codemirror/theme/xq-light.css';
 import 'codemirror/theme/yeti.css';
 import 'codemirror/theme/zenburn.css';
+import SideResizeable from "../../../../Components/SideResizeable";
 
 
 require('codemirror/mode/markdown/markdown');
@@ -86,13 +87,15 @@ class CodeEditor extends Component {
 
     render() {
         return (
-            <CodeMirror value={"# Quant Note \n <h2>I ♥ react-codemirror2</h2> \n Обычный **Жирный** *Курсив*"}
-                        options={{
-                            mode: 'markdown',
-                            theme: this.state.theme,
-                            lineNumbers: true
-                        }}
-                        onChange={(editor, data, value) => {}} height="100%"/>
+            <SideResizeable widthSettingsKey="codeEditorWidth" minWidth={170}>
+                <CodeMirror value={"# Quant Note \n <h2>I ♥ react-codemirror2</h2> \n Обычный **Жирный** *Курсив*"}
+                            options={{
+                                mode: 'markdown',
+                                theme: this.state.theme,
+                                lineNumbers: true
+                            }}
+                            onChange={(editor, data, value) => {}} height="100%"/>
+            </SideResizeable>
         );
     }
 }

@@ -5,8 +5,8 @@ import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import 'rc-switch/assets/index.css'
-import Main from './Components/Main/Main';
-import Settings from './Components/Settings/Settings'
+import Main from './Pages/Main/Main';
+import Settings from './Pages/Settings/Settings'
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 

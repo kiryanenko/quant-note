@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NavLink from './NavLink/NavLink'
 import NavTab from './NavTab/NavTab'
-import {initI18n} from '../Utils/locale'
+import {initI18n} from '../../Components/libs/locale'
 
 const { remote } = window.require('electron');
 const settings = remote.require('electron-settings');

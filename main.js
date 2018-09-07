@@ -62,4 +62,7 @@ function setDefaultSettings() {
     }
 
     if (!settings.has('editorTheme')) settings.set('editorTheme', 'base16-light', {prettify: true});
+    if (!settings.has('sideNavWidth')) settings.set('sideNavWidth', 300, {prettify: true});
+    if (!settings.has('noteListBarWidth')) settings.set('noteListBarWidth', 300, {prettify: true});
+    if (!settings.has('codeEditorWidth')) settings.set('codeEditorWidth', 200, {prettify: true});
 }
