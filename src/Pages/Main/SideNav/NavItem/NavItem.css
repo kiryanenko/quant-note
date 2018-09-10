@@ -1,6 +1,6 @@
 #SideNav ul li a {
-    padding: 5px;
-    font-size: 1.1em;
+    padding: 4px;
+    font-size: 0.95em;
     display: block;
     white-space: nowrap;
 }
@@ -16,28 +16,28 @@
 }
 
 #SideNav ul ul a {
-    font-size: 0.9em !important;
-    padding-left: 25px !important;
+    font-size: 0.88em !important;
+    padding-left: 22px !important;
     background: #37474f;
 }
 
 #SideNav ul ul ul a {
-    padding-left: 50px !important;
+    padding-left: 40px !important;
     background: #455a64;
 }
 
 #SideNav ul ul ul ul a {
-    padding-left: 75px !important;
+    padding-left: 60px !important;
     background: #546e7a;
 }
 
 #SideNav ul ul ul ul ul a {
-    padding-left: 100px !important;
+    padding-left: 80px !important;
     background: #607d8b;
 }
 
 #SideNav ul ul ul ul ul a {
-    padding-left: 125px !important;
+    padding-left: 100px !important;
     background: #78909c;
 }
 

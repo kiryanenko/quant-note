@@ -19,7 +19,7 @@ class NoteDetail extends Component {
                 <div className="container-fluid d-flex flex-column h-100">
                     <div id="NoteDetailHeader" className="py-2">
                         <div className="d-flex justify-content-between align-items-top">
-                            <h2><Fa icon="sticky-note"/> Название заметки</h2>
+                            <h3><Fa icon="sticky-note"/> Название заметки</h3>
                             <div className="d-flex">
                                 <Switch unCheckedChildren={(<Fa icon="window-maximize"/>)}
                                         checkedChildren={(<Fa icon="columns"/>)}
