@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
 import NavItem from './NavItem/NavItem'
 import {initI18n} from '../../../Components/libs/locale'
 import './SideNav.css';
@@ -9,11 +10,20 @@ class FolderList extends Component {
         super(props);
 
         initI18n(this);
+
+        this.onRightClick = this.onRightClick.bind(this);
+    }
+
+    onRightClick(e) {
+        return false;
     }
 
     render() {
         return (
-            <ul className="list-unstyled components" hidden={this.props.hidden}>
+            <ul className="list-unstyled components flex-fill h-100"
+                hidden={this.props.hidden}
+                onContextMenu={this.onRightClick}
+            >
                 <NavItem text={this.state.i18n.__('All notes')} icon="dashboard" href="#" count={321}/>
                 <NavItem text={this.state.i18n.__('Favorites')} icon="star" href="#" count={12}/>
                 <br/>

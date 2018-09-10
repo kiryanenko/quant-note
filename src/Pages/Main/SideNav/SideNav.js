@@ -45,7 +45,7 @@ class SideNav extends Component {
                         </Tooltip>
                     </div>
 
-                    <div className="scroll flex-grow-1 mb-0">
+                    <div className="scroll flex-fill d-flex flex-column mb-0">
                         <FolderList hidden={this.state.navType !== 'folders'} />
                         <TagList hidden={this.state.navType !== 'tags'}/>
                     </div>
