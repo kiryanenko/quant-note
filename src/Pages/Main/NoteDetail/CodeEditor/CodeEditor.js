@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {UnControlled as CodeMirror} from 'react-codemirror2'
 import 'codemirror/lib/codemirror.css';
+import './CodeEditor.css'
 
 // FIXME: import 'codemirror/theme/*'
 import 'codemirror/theme/3024-day.css';
@@ -94,7 +95,9 @@ class CodeEditor extends Component {
                                 theme: this.state.theme,
                                 lineNumbers: true
                             }}
-                            onChange={(editor, data, value) => {}} height="100%"/>
+                            onChange={(editor, data, value) => {}}
+                            className="h-100"
+                />
             </SideResizeable>
         );
     }

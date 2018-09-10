@@ -21,7 +21,8 @@
 	"By title": "По названию",
 	"Language": "Язык",
 	"Editor theme": "Тема редактора",
-	"Tags": "Метки",
-	"Basic": "Основные",
-	"About": "О нас"
+	"Tags": "Tags",
+	"Basic": "Basic",
+	"About": "About",
+	"Open in window": "Открыть в окне"
 }

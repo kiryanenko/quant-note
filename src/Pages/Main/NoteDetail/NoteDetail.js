@@ -24,9 +24,9 @@ class NoteDetail extends Component {
                                 <Switch unCheckedChildren={(<Fa icon="window-maximize"/>)}
                                         checkedChildren={(<Fa icon="columns"/>)}
                                         className="mr-3" checked/>
-                                <Tooltip placement="bottom" component="a" tooltipContent={this.state.i18n.__('Fullscreen')}
-                                         componentClass="mr-5">
-                                    <Fa icon="arrows-alt" size="lg"/>
+                                <Tooltip placement="bottom" component="a"
+                                         tooltipContent={this.state.i18n.__('Open in window')} componentClass="mr-5">
+                                    <Fa icon="window-restore" size="lg"/>
                                 </Tooltip>
 
                                 <Tooltip placement="bottom" component="a"
