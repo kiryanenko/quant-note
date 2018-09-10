@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import NavLink from './NavLink/NavLink'
-import NavTab from './NavTab/NavTab'
+import NavLink from './NavLink'
+import NavTab from './NavTab'
 import {initI18n} from '../../Components/libs/locale'
 
 const { remote } = window.require('electron');
@@ -54,9 +54,9 @@ class Settings extends Component {
                     <div className="col-3">
                         <div className="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
                             <NavLink active={this.state.tab === 'basic'} onClick={this.setTab.bind(this, 'basic')}>
-                                Basic</NavLink>
+                                {this.state.i18n.__('Basic')}</NavLink>
                             <NavLink active={this.state.tab === 'about'} onClick={this.setTab.bind(this, 'about')}>
-                                About</NavLink>
+                                {this.state.i18n.__('About')}</NavLink>
                         </div>
                     </div>
                     <div className="col-9">
@@ -77,7 +77,7 @@ class Settings extends Component {
                                     <div className="col-9">
                                         <select className="form-control" value={this.state.editorTheme}
                                                 onChange={this.onEditorThemeChange}>
-                                            {{/* FIXME: CodeMirror themes */}}
+                                            {/* FIXME: CodeMirror themes */}
                                             <option value="3024-day">3024-day</option>
                                             <option value="3024-night">3024-night</option>
                                             <option value="abcdef">abcdef</option>

@@ -65,4 +65,5 @@ function setDefaultSettings() {
     if (!settings.has('sideNavWidth')) settings.set('sideNavWidth', 300, {prettify: true});
     if (!settings.has('noteListBarWidth')) settings.set('noteListBarWidth', 300, {prettify: true});
     if (!settings.has('codeEditorWidth')) settings.set('codeEditorWidth', 200, {prettify: true});
+    if (!settings.has('Main.SideNav.navType')) settings.set('Main.SideNav.navType', 'folders', {prettify: true});
 }
