@@ -13,3 +13,47 @@ html, body {
 .scroll {
     overflow: auto;
 }
+
+/* CONTEXT MENU */
+
+.react-contextmenu {
+    z-index: 1000;
+    float: left;
+    min-width: 10rem;
+    padding: .1rem 0;
+    margin: .125rem 0 0;
+    font-size: .97rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+}
+
+.react-contextmenu-item {
+    display: block;
+    width: 100%;
+    padding: .25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+
+.react-contextmenu-item:focus,
+.react-contextmenu-item:hover {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #f8f9fa;
+}
+
+.react-contextmenu-item:active {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #007bff;
+}
